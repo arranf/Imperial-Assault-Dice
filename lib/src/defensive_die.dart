@@ -6,7 +6,7 @@ abstract class DefensiveDie extends Die {
   @override
   final List<DefensiveDieFace> dieFaces;
 
-  DefensiveDie(this.dieFaces, String name) : super(name);
+  DefensiveDie(this.dieFaces, String name) : super(name, null);
 
   double AverageDamageBlocked() => this.dieFaces.fold(0, (int value, DefensiveDieFace f) => value + f.damageBlocked) / this.dieFaces.length;
   double AverageSurgeCancelled () => this.dieFaces.fold(0, (int value, DefensiveDieFace f ) => value + f.surgeCancelled) / this.dieFaces.length;

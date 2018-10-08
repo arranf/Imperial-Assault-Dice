@@ -8,7 +8,7 @@ class DiceCalculator {
   final List<OffensiveDie> offensiveDice;
   final List<DefensiveDie> defensiveDice;
 
-  DiceCalculator(this.offensiveDice, this.defensiveDice);
+  DiceCalculator(this.offensiveDice, [this.defensiveDice = const []]);
   
   SimulationResult Simulate([int simulationCount = 10000]) {
     List<_RollResult> simulations = new List();
@@ -17,6 +17,7 @@ class DiceCalculator {
       simulations.add(_CalculateEffectiveRoll());
     }
 
+    // TODO: FUN STUFF
     double averageDamage = simulations.map((_RollResult r) => r.damage).fold(0, (int v, int n) => v + n) / simulationCount;
     double averageSurge = simulations.map((_RollResult r) => r.surge).fold(0, (int v, int n) => v + n) / simulationCount;
     double missLikelihood = simulations.where((_RollResult r) => r.isMiss).length / simulationCount;

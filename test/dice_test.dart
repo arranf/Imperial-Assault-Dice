@@ -7,10 +7,7 @@ import 'package:test/test.dart';
 
 import 'custom_matchers.dart';
 
-void main() {
-
-  
-  
+void main() { 
   const int ROLL_AMOUNT = 1000;
 
   group('Red Die Tests', () {
@@ -21,7 +18,6 @@ void main() {
     }
 
     test('Average Damage = 13/6', () => expect(redDie.AverageDamage(), equals(13/6)));
-
     test('Average Range = 0', () => expect(redDie.AverageRange(), equals(0)));
     test('Average Surge = 1/6', () => expect(redDie.AverageSurge(), equals(1/6)));
     test('Name Correct', () => expect(redDie.name, equals('Red Die')));

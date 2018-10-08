@@ -6,7 +6,7 @@ abstract class Die {
   final List<DieFace> dieFaces;
   final String name;
   
-  Die(this.name);
+  Die(this.name, this.dieFaces);
 
   DieFace roll() {
     var random = new Random();

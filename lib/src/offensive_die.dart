@@ -5,7 +5,7 @@ abstract class OffensiveDie extends Die {
   @override
   List<OffensiveDieFace> dieFaces;
 
-  OffensiveDie(this.dieFaces, String name) : super(name);
+  OffensiveDie(this.dieFaces, String name) : super(name, null);
 
   double AverageDamage() => this.dieFaces.fold(0.0, (double v, OffensiveDieFace f) => v + f.damage) / this.dieFaces.length;
   double AverageSurge () => this.dieFaces.fold(0.0, (double v, OffensiveDieFace f) => v + f.surge) / this.dieFaces.length;
