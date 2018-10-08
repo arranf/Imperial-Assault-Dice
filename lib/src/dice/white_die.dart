@@ -11,8 +11,5 @@ class WhiteDie extends DefensiveDie {
     new DefensiveDieFace(1, 1),
     new DefensiveDieFace(1, 0),
   ];
-  WhiteDie() : super(_dieFaces);
-
-  @override
-  String toString() => 'White Die Die: ${super.toString()}';
+  WhiteDie() : super(_dieFaces, 'White Die');
 }

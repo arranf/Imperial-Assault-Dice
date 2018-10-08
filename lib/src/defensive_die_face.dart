@@ -1,17 +1,17 @@
 import 'package:imperial_assault_dice/src/die_face.dart';
 
 class DefensiveDieFace extends DieFace {
-  int surgeCancel;
+  int surgeCancelled;
   int damageBlocked;
-  bool isMiss;
+  bool isDodge;
 
-  DefensiveDieFace(this.damageBlocked, this.surgeCancel, [this.isMiss = false]);
+  DefensiveDieFace(this.damageBlocked, this.surgeCancelled, [this.isDodge = false]);
 
   @override
   String toString() {
-    if (isMiss) {
+    if (isDodge) {
       return 'Missed';
     }
-    return '$surgeCancel surge cancel and $damageBlocked damage blocked';
+    return '$surgeCancelled surge cancel and $damageBlocked damage blocked';
   } 
 }

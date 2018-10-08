@@ -2,10 +2,11 @@ import 'dart:math';
 
 import 'package:imperial_assault_dice/src/die_face.dart';
 
-class Die {
+abstract class Die {
   final List<DieFace> dieFaces;
-
-  Die(this.dieFaces);
+  final String name;
+  
+  Die(this.name);
 
   DieFace roll() {
     var random = new Random();

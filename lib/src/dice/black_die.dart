@@ -11,8 +11,6 @@ class BlackDie extends DefensiveDie {
     new DefensiveDieFace(2, 0),
     new DefensiveDieFace(3, 0),
   ];
-  BlackDie() : super(_dieFaces);
-
-  @override
-  String toString() => 'Black Die Die: ${super.toString()}';
+  
+  BlackDie() : super(_dieFaces, 'Black Die');
 }

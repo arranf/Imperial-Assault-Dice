@@ -10,8 +10,5 @@ class RedDie extends OffensiveDie {
     new OffensiveDieFace(1, 2),
     new OffensiveDieFace(0, 1),
   ];
-  RedDie() : super(_dieFaces);
-
-  @override
-  String toString() => 'Red Die: ${super.toString()}';
+  RedDie() : super(_dieFaces, 'Red Die');
 }

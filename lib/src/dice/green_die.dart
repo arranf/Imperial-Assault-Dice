@@ -11,8 +11,5 @@ class GreenDie extends OffensiveDie {
     new OffensiveDieFace(1, 0, 1),
   ];
 
-  GreenDie() : super(_dieFaces);
-
-  @override
-  String toString() => 'Green Die: ${super.toString()}';
+  GreenDie() : super(_dieFaces, 'Green Die');
 }
