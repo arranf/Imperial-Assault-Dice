@@ -1,7 +1,4 @@
-A library for Dart developers.
-
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+A library for simulating rolling dice in FFG's Imperial Assault.
 
 ## Usage
 
@@ -11,7 +8,13 @@ A simple usage example:
 import 'package:imperial_assault_dice/imperial_assault_dice.dart';
 
 main() {
-  var awesome = new Awesome();
+  var calculator = new DiceCalculator([new RedDie(), new YellowDie()], [new BlackDie()]);
+
+  var result = calculator.Simulate(30);
+  print(result);
+  
+  var redDie = new RedDie();
+  print(redDie.roll());
 }
 ```
 
@@ -19,4 +22,4 @@ main() {
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: http://example.com/issues/replaceme
+[tracker]: https://github.com/arranf/Imperial-Assault-Dice/issues
