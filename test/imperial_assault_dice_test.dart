@@ -5,13 +5,12 @@ import 'package:imperial_assault_dice/src/offensive_die_face.dart';
 
 import 'package:test/test.dart';
 
+import 'custom_matchers.dart';
+
 void main() {
 
-  Matcher damage(m) => new _Damage(wrapMatcher(m));
-  Matcher range(m) => new _Range(wrapMatcher(m));
-  Matcher surge(m) => new _Surge(wrapMatcher(m));
-  Matcher damageBlocked(m) => new _DamageBlocked(wrapMatcher(m));
-  Matcher surgeCancelled(m) => new _SurgeCancelled(wrapMatcher(m));
+  
+  
   const int ROLL_AMOUNT = 1000;
 
   group('Red Die Tests', () {
@@ -137,29 +136,4 @@ void main() {
         surgeCancelled(inInclusiveRange(0, 1))
       ]))));
     });
-}
-
-class _Damage extends CustomMatcher {
-  _Damage(matcher) : super('Die Face with damage that is', 'damage', matcher);
-  featureValueOf(actual) => actual.damage;
-}
-
-class _Range extends CustomMatcher {
-  _Range(matcher) : super('Die Face with range that is', 'range', matcher);
-  featureValueOf(actual) => actual.range;
-}
-
-class _Surge extends CustomMatcher {
-  _Surge(matcher) : super('Die Face with surge that is', 'surge', matcher);
-  featureValueOf(actual) => actual.surge;
-}
-
-class _DamageBlocked extends CustomMatcher {
-  _DamageBlocked(matcher) : super('Die Face with damage blocked that is', 'damage blocked', matcher);
-  featureValueOf(actual) => actual.damageBlocked;
-}
-
-class _SurgeCancelled extends CustomMatcher {
-  _SurgeCancelled(matcher) : super('Die Face with surge cancelled that is', 'surge cancelled', matcher);
-  featureValueOf(actual) => actual.surgeCancelled;
 }
