@@ -1,3 +1,3 @@
-class DieFace {
+abstract class DieFace {
 
 }

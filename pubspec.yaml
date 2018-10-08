@@ -1,6 +1,6 @@
 name: imperial_assault_dice
 description: A package for simulating FFG's Imperial Assault dice behaviour
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/arranf/Imperial-Assault-Dice
 author: Arran France <arranf@gmail.com>
 

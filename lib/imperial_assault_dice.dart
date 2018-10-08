@@ -19,3 +19,5 @@ export 'src/defensive_die.dart';
 export 'src/defensive_die_face.dart';
 export 'src/offensive_die.dart';
 export 'src/offensive_die_face.dart';
+export 'src/die.dart';
+export 'src/die_face.dart';
